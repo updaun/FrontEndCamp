@@ -57,9 +57,9 @@ html, body {
     height: 270px;
 }
 
-.graybox {
+.video {
     width: 100%;
-    height: 250px;
-    margin: 10px 0px;
-    background-color: gray;
+    height: 240px;
+    background-color: #C4C4C4;
+    margin-top: 15px;
 }
