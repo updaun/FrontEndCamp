@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.wrapper__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title {
+    color: #55B2E4;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 8px;
+    padding-left: 5px;
+}
+
+.divideLine {
+    width: 100%;
+    border-top: 1px solid gray;
+}
+
+.game__container {
+    width: 222px;
+    height: 168px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f6f6f6;
+}
+
+.game__img {
+    height: 50px;
+}
+
+.game__title {
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.game__subtitle {
+    font-size: 9px;
+}
+
+.word__result {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.word__text {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.textbox {
+    width: 130px;
+    height: 24px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.search {
+    font-size: 11px;
+    font-weight: 700;
+    width: 38px;
+    height: 24px;
+}
+
+.lotto__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    height: 20px;
+    background-color: yellow;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 8px;
+}
+
+.lotto__number {
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.lotto__button {
+    font-size: 9px;
+    font-weight: 700;
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
