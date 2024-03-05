@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Final Signup Page</title>
+    <link rel="stylesheet" href="final.css">
+    <script src="final.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="signup-box">
+    <div class="signup-form">
+        <div class="signup-title">코드캠프 회원가입</div>
+        <div class="signup-field">
+            <input type="text" id="email" placeholder="이메일을 입력해 주세요.">
+            <input type="text" id="name" placeholder="이름을 입력해 주세요.">
+            <input type="password" id="password" placeholder="비밀번호를 입력해 주세요.">
+            <input type="password" id="password-confirm" placeholder="비밀번호를 다시 입력해 주세요.">
+        </div>
+        <div class="signup-phone">
+            <input type="text" id="phone1" oninput="changeFocus()" maxlength="3">
+            <p>ㅡ</p>
+            <input type="text" id="phone2" oninput="changeFocus2()" maxlength="4">
+            <p>ㅡ</p>
+            <input type="text" id="phone3" maxlength="4">
+        </div>
+        <div class="signup-auth">
+            <div class="auth-code">000000</div>
+            <button id="auth-button">인증번호 전송</button>
+        </div>
+        <div class="signup-timer">
+            <div class="auth-timer">3:00</div>
+            <button id="auth-complete-button">인증 완료</button>
+        </div>
+        <select class="signup-region" id="signup-region">
+            <option selected disabled>지역을 선택하세요.</option>
+            <option value="서울">서울</option>
+            <option value="경기">경기</option>
+            <option value="인천">인천</option>
+        </select>
+        <div class="signup-gender">
+            <input type="radio" id="male" name="gender"><span>여성</span>
+            <input type="radio" id="female" name="gender"><span>남성</span>
+        </div>
+        <div class="divideLine"></div>
+        <button class="signup-button">가입하기</button>
+    </div>
+</div>
+</body>
+</html>
