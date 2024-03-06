@@ -29,12 +29,14 @@ html, body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 30px;
+    align-items: center;
 }
 
 .signup-field input {
+    width: 100%;
     padding: 14px 10px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     border: 1px solid #CFCFCF;
 }
 
@@ -44,12 +46,18 @@ html, body {
     font-weight: 700;
 }
 
+.phone-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .signup-phone {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-width: 400px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     align-items: center;
 }
 
@@ -71,7 +79,7 @@ html, body {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
     color: #0068FF;
 }
 
@@ -80,9 +88,16 @@ html, body {
     height: 40px;
     margin-left: 20px;
     color: #0068FF;
-    font-weight: 700;
+    font-weight: 500;
     border-radius: 7px;
     border-color: #CFCFCF;
+    border: 1px solid #CFCFCF;
+}
+
+.signup-auth button:disabled {
+    background-color: #CFCFCF;
+    color: gray;
+    border: none;
 }
 
 .signup-timer {
@@ -91,7 +106,7 @@ html, body {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
     color: #0068FF;
 }
 
@@ -99,16 +114,35 @@ html, body {
     width: 120px;
     height: 40px;
     margin-left: 20px;
+    font-weight: 500;
     background-color: #0068FF;
     color: white;
     border: none;
     border-radius: 7px;
 }
 
+.signup-timer button:disabled {
+    background-color: #CFCFCF;
+    color: gray;
+}
+
+.region-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .signup-region {
+    width: 100%;
     padding: 14px 10px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     border: 1px solid #CFCFCF;
+}
+
+.gender-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .signup-gender {
@@ -116,8 +150,7 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 20px;
-    padding: 10px;
+    margin-top: 20px;
 }
 
 .signup-gender span {
@@ -128,6 +161,7 @@ html, body {
 .divideLine {
     width: 100%;
     border-top: 1px solid #CFCFCF;
+    margin-top: 20px;
 }
 
 .signup-button {
@@ -139,4 +173,9 @@ html, body {
     border-radius: 10px;
     font-size: 18px;
     font-weight: 700;
+}
+
+.error {
+    color: red;
+    font-size: 10px;
 }
