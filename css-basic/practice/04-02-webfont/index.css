@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+div {
+    font-family: "Song Myung", serif;
+}
+
