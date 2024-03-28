@@ -94,10 +94,7 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
-.mainMenu ul li a:hover {
-    padding-left: 20px;
-    background: rgb(255, 145, 0);
-}
+
 
 .writeBtnBox {
     margin-top: 10px;
@@ -205,24 +202,7 @@ a {
     opacity: 0;
 }
 
-.item:hover:after {
-    opacity: 1;
-}
 
-.item:hover .imgBox img {
-    transform: scale(1.1);
-    filter: blur(3px);
-}
-
-.item:hover .textBox__name {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.item:hover .textBox__price {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 .item:after,
 .item .imgBox img,
@@ -233,4 +213,138 @@ a {
 
 .item .textBox__price {
     transition: all 0.4s ease-in-out 0.1s;
+}
+
+
+@media screen and (max-width: 767px) {
+    /* mobile */
+    .mainBanner {
+        height: 160px;
+        margin-bottom: 0;
+    }
+
+    .mainBanner .text {
+        font-size: 26px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 0;
+    }
+
+    .mainMenu {
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .mainMenu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .mainMenu ul li a {
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+
+    .writeBtnBox {
+        display: none;
+    }
+
+    .itemWrap {
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .item {
+        width: calc(50% - 7px);
+        overflow: visible;
+        border: 1px solid #dddddd;
+    }
+
+    .textBox {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .textBox p {
+        color: black;
+    }
+
+    .textBox__name {
+        font-size: 18px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .textBox__price {
+        font-size: 12px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* tablet */
+    .item {
+        overflow: visible;
+        border: 1px solid #dddddd;
+    }
+
+    .textBox {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .textBox p {
+        color: black;
+    }
+
+    .textBox__name {
+        font-size: 18px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .textBox__price {
+        font-size: 12px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* desktop */
+    .mainMenu ul li a:hover {
+        padding-left: 20px;
+        background: rgb(255, 145, 0);
+    }
+
+    .item:hover:after {
+        opacity: 1;
+    }
+
+    .item:hover .imgBox img {
+        transform: scale(1.1);
+        filter: blur(3px);
+    }
+
+    .item:hover .textBox__name {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .item:hover .textBox__price {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
