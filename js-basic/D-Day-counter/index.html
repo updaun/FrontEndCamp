@@ -3,36 +3,7 @@
   <head>
     <title>D-Day</title>
     <link rel="stylesheet" href="style.css" />
-    <script>
-      const dateFormMaker = function () {
-        let inputYear = document.querySelector("#target-year-input").value;
-        let inputMonth = document.querySelector("#target-month-input").value;
-        let inputDate = document.querySelector("#target-date-input").value;
-
-        const dateFormat = `${inputYear}-${inputMonth}-${inputDate}`;
-
-        return dateFormat;
-      };
-
-      const counterMaker = function () {
-        const targetDateInput = dateFormMaker();
-        const nowDate = new Date();
-        const targetDate = new Date(targetDateInput).setHours(0, 0, 0, 0);
-        const remaining = (targetDate - nowDate) / 1000;
-
-        const remainingDate = Math.floor(remaining / 3600 / 24);
-        const remainingHour = Math.floor((remaining / 3600) % 24);
-        const remainingMinute = Math.floor((remaining / 60) % 60);
-        const remainingSecond = Math.floor(remaining % 60);
-
-        console.log(
-          remainingDate,
-          remainingHour,
-          remainingMinute,
-          remainingSecond
-        );
-      };
-    </script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <h1>D-Day</h1>
@@ -54,6 +25,7 @@
         <span>초</span>
       </div>
     </div>
+    <div id="d-day-message"></div>
     <div id="target-selector">
       <input id="target-year-input" class="target-input" size="5" /> -
       <input id="target-month-input" class="target-input" size="5" /> -
