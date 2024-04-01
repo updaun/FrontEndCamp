@@ -43,8 +43,15 @@ const counterMaker = function () {
     seconds: document.getElementById("seconds"),
   };
 
-  documentObj.days.textContent = remainingObj.remainingDate;
-  documentObj.hours.textContent = remainingObj.remainingHour;
-  documentObj.minutes.textContent = remainingObj.remainingMinute;
-  documentObj.seconds.textContent = remainingObj.remainingSecond;
+  const timeKeys = Object.keys(remainingObj);
+  const docKeys = Object.keys(documentObj);
+
+  for (let i = 0; i < timeKeys.length; i = i + 1) {
+    documentObj[docKeys[i]].textContent = remainingObj[timeKeys[i]];
+  }
+
+  // documentObj.days.textContent = remainingObj.remainingDate;
+  // documentObj.hours.textContent = remainingObj.remainingHour;
+  // documentObj.minutes.textContent = remainingObj.remainingMinute;
+  // documentObj.seconds.textContent = remainingObj.remainingSecond;
 };
