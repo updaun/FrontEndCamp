@@ -83,10 +83,18 @@ if (savedTodoList) {
 
 const weatherSearch = function (position) {
   console.log(position.latitude, position.longitude);
-  const openWeatherRes = fetch(
+  fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${position.latitude}&lon=${position.longitude}&appid=acaf80bc178551741d7fb23521c30600`
-  );
-  console.log(openWeatherRes);
+  )
+    .then((res) => {
+      return res.json();
+    })
+    .then((json) => {
+      console.log(json.name, json.weather[0].description);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
 
 const accessToGeo = function (position) {
