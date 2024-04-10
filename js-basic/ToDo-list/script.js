@@ -38,7 +38,7 @@ const createTodo = function (storageData) {
 };
 
 const keyCodeCheck = function () {
-  if (window.event.keyCode === 13 && todoInput.value !== "") {
+  if (window.event.keyCode === 13 && todoInput.value.trim() !== "") {
     createTodo();
   }
 };
@@ -93,7 +93,7 @@ const weatherSearch = function (position) {
       console.log(json.name, json.weather[0].description);
     })
     .catch((err) => {
-      console.log(err);
+      console.error(err);
     });
 };
 
