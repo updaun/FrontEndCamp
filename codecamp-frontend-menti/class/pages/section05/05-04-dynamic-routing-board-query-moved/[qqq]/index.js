@@ -1,8 +1,9 @@
 import { useQuery, gql } from "@apollo/client";
+import { useRouter } from "next/router";
 
 const FETCH_BOARD = gql`
-  query {
-    fetchBoard(number: 1) {
+  query fetchBoard($number: Int) {
+    fetchBoard(number: $number) {
       number
       writer
       title
@@ -12,13 +13,20 @@ const FETCH_BOARD = gql`
 `;
 
 export default function StaticRoutingMovedPage() {
-  const { data } = useQuery(FETCH_BOARD);
+  const router = useRouter();
+  console.log(router);
+  const { data } = useQuery(FETCH_BOARD, {
+    variables: {
+      number: Number(router.query.qqq),
+    },
+  });
 
+  console.log(router.query.qqq);
   console.log(data);
 
   return (
     <div>
-      <div>1번 게시글 이동이 완료되었습니다.</div>
+      <div>{router.query.qqq}번 게시글 이동이 완료되었습니다.</div>
       <div>작성자: {data?.fetchBoard?.writer}</div>
       <div>제목: {data?.fetchBoard?.title}</div>
       <div>내용: {data?.fetchBoard?.contents}</div>
