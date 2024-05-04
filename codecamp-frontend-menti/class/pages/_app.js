@@ -8,8 +8,12 @@ export default function App({ Component, pageProps }) {
   });
 
   return (
-    <ApolloProvider client={client}>
-      <Component {...pageProps} />
-    </ApolloProvider>
+    <div>
+      <div>==== 여기는 _app.js 위쪽 ====</div>
+      <ApolloProvider client={client}>
+        <Component {...pageProps} />
+      </ApolloProvider>
+      <div>==== 여기는 _app.js 아래쪽 ====</div>
+    </div>
   );
 }
